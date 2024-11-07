@@ -1,0 +1,23 @@
+#Habilitando cors de forma global
+#cors:
+#  originPatterns: http://localhost:8080,http://localhost:3000,http://localhost:4200
+spring:
+  sql:
+    init:
+      mode: always
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb
+    username: admin
+    password: 123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# docmentar apenas o path da api
+spring-doc:
+  pathsToMatch: /api/v1/**/**
+  swagger-ui:
+    use-root-path: true
